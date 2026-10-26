@@ -1,6 +1,9 @@
 <h1>כניסה להתקנת תוכנות לימודיות על המחשב</h1>
 <label>ת.ז.:</label>
-<input  type="numbers" [(ngModel)]="id" placeholder="הכנס את הת.ז. שלך"><br><br><br> 
+<input type="number" [(ngModel)]="id" placeholder="הכנס את הת.ז. שלך"><br><br><br>
 <label>האם קראת ואישרת את התקנון?</label>
-<input  type="checkbox" [(ngModel)]="checked"><br><br>
+<input type="checkbox" [(ngModel)]="checked"><br><br>
 <button [disabled]="!checked">היכנס</button>
+
+<app-mycomp></app-mycomp>
+<app-mail></app-mail>

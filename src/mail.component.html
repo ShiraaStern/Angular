@@ -1,0 +1,6 @@
+<input (mouseenter)="ifhover = true" (mouseleave)="ifhover = false" 
+       (keyup.enter)="enter()"
+[ngModel]="email" מ(ngModelChange)="char($event)" type="text" placeholder="Enter your email">
+<p *ngIf="ifhover">חובה למלא כתובת מייל</p>
+<button (click)="addEndGmail()">@gmail.com</button>
+<h1 *ngIf="isSubmitted">כתובת המייל שנקלטה היא: {{ submittedEmail }}</h1>

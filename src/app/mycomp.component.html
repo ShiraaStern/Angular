@@ -1,0 +1,8 @@
+<h1>הציונים שלי</h1>
+
+<div *ngFor="let subjectGrade of subjectGrades">
+  <h2>{{ subjectGrade.subject }}: {{ subjectGrade.grade }}</h2>
+
+  <h3 *ngIf="subjectGrade.grade >= 60">עברת את המבחן — כל הכבוד!</h3>
+  <h3 *ngIf="subjectGrade.grade < 60">מצטערים, לא עברת את המבחן</h3>
+</div>
