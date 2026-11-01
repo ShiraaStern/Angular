@@ -1,0 +1,6 @@
+<h2>{{ product.name }}</h2>
+<p>{{ product.description }}</p>
+<p style="color: yellow;">{{ product.price }} ₪</p>
+<p>המחיר לאחר ההנחה: {{product.price - product.price*product.discount/100 }} ₪</p>
+<p *ngIf=" product.price*product.discount/100 > 110"
+  style="color: rgb(95, 252, 255); font-weight: bold;">הנחה משתלמת!</p>
