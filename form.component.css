@@ -1,0 +1,5 @@
+form { display: flex; flex-direction: column; max-width: 400px; gap: 6px; direction: rtl; }
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched { border: 2px solid red; background: #fff0f0; }
+.error { color: red; }

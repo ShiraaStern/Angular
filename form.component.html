@@ -1,0 +1,36 @@
+<form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+
+  <label>תאריך</label>
+  <input type="date" formControlName="date">
+
+  <label>שם המזמין</label>
+  <input type="text" formControlName="customerName">
+
+  <label>כתובת</label>
+  <input type="text" formControlName="address">
+
+  <label>עיר</label>
+  <input type="text" formControlName="city">
+
+  <label>טלפון</label>
+  <input type="text" formControlName="phone">
+  @if (orderForm.controls.phone.touched && orderForm.controls.phone.errors?.['minlength']) {
+    <small class="error">מספר הטלפון קצר מדי</small>
+  }
+
+  <label>סיבת הזימון</label>
+  <select formControlName="reason">
+    <option value="">בחרי סיבה</option>
+    <option value="newProduct">התקנת מוצר חדש</option>
+    <option value="inWarranty">תקלה בתקופת אחריות</option>
+    <option value="outOfWarranty">תקלה לאחר תקופת אחריות</option>
+  </select>
+
+  <label>מספר חשבונית</label>
+  <input type="text" formControlName="invoiceNumber">
+
+  <label>תיאור התקלה</label>
+  <textarea formControlName="faultDescription"></textarea>
+
+  <button type="submit">שלח</button>
+</form>
